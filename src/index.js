@@ -2,10 +2,6 @@ import { Plugin, Function, AutoCommand, Command } from 'neovim';
 
 @Plugin({ dev: true })
 export default class TestPlugin {
-  constructor(nvim) {
-    this.nvim = nvim;
-  }
-
   @Function('Vsplit', { sync: true })
   splitMe(args, done) {
     this.nvim.command('vsplit');
